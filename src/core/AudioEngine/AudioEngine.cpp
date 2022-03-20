@@ -2228,9 +2228,9 @@ int AudioEngine::updateNoteQueue( unsigned nFrames )
 
 	AutomationPath* pAutomationPath = pSong->getVelocityAutomationPath();
  
-	DEBUGLOG( QString( "tick interval: [%1 : %2], curr tick: %3, curr frame: %4")
-			  .arg( fTickStart, 0, 'f' ).arg( fTickEnd, 0, 'f' )
-			  .arg( getDoubleTick(), 0, 'f' ).arg( getFrames() ) );
+	//DEBUGLOG( QString( "tick interval: [%1 : %2], curr tick: %3, curr frame: %4")
+	//     .arg( fTickStart, 0, 'f' ).arg( fTickEnd, 0, 'f' )
+	//		 .arg( getDoubleTick(), 0, 'f' ).arg( getFrames() ) );
 
 	// We loop over integer ticks to ensure that all notes encountered
 	// between two iterations belong to the same pattern.
@@ -2344,9 +2344,9 @@ int AudioEngine::updateNoteQueue( unsigned nFrames )
 					nPatternSize;
 			}
 
-			DEBUGLOG( QString( "[post] nnTick: %1, nPatternTickPosition: %2, nPatternStartTick: %3, nPatternSize: %4" )
-					  .arg( nnTick ).arg( nPatternTickPosition )
-					  .arg( nPatternStartTick ).arg( nPatternSize ) );
+			//DEBUGLOG( QString( "[post] nnTick: %1, nPatternTickPosition: %2, nPatternStartTick: %3, nPatternSize: %4" )
+			//		  .arg( nnTick ).arg( nPatternTickPosition )
+			//		  .arg( nPatternStartTick ).arg( nPatternSize ) );
 		}
 		
 		//////////////////////////////////////////////////////////////
@@ -2489,11 +2489,11 @@ int AudioEngine::updateNoteQueue( unsigned nFrames )
 						Note *pCopiedNote = new Note( pNote );
 						pCopiedNote->set_humanize_delay( nOffset );
 
-						DEBUGLOG( QString( "getDoubleTick(): %1, getFrames(): %2, getColumn(): %3, nnTick: %4, nColumn: %5, " )
-								  .arg( getDoubleTick() ).arg( getFrames() )
-								  .arg( getColumn() ).arg( nnTick )
-								  .arg( nColumn )
-								  .append( pCopiedNote->toQString("", true ) ) );
+						//DEBUGLOG( QString( "getDoubleTick(): %1, getFrames(): %2, getColumn(): %3, nnTick: %4, nColumn: %5, " )
+						//		  .arg( getDoubleTick() ).arg( getFrames() )
+						//		  .arg( getColumn() ).arg( nnTick )
+						//		  .arg( nColumn )
+						//		  .append( pCopiedNote->toQString("", true ) ) );
 						
 						pCopiedNote->set_position( nnTick );
 						// Important: this call has to be done _after_
